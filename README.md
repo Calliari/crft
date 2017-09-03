@@ -10,6 +10,19 @@ mkdir crft && cd crft # create a repository from the terminal and cd into it
 ```
 echo "# This is the README file" > README.md
 ```
+#### Create a file .gitignore
+```
+cat >> .gitignore <<EOL
+
+# Ignore the configuration files
+
+
+# Ignore other files
+
+*.DS_Store
+
+EOL
+```
 
 #### (1) First step - generate the link between local and remote repos
 ```
@@ -28,4 +41,4 @@ git push -u origin master
 
 ```
 
-Done, check your Github repositories, a new repo is created with the name "crft" under profile name 
+Done, check your Github repositories, a new repo is created with the name "crft" under profile name
