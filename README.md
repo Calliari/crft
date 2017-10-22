@@ -33,11 +33,18 @@ Terminal will ask the details for credentials from git, type your github passwor
 #### (2) Second step - …or create a new repository on the command line
 
 ```
-git init
-git add .
-git commit -m "first commit"
+git init && git add . && git commit -m "first commit"
 git remote add origin https://github.com/Calliari/crft.git
 git push -u origin master
+
+```
+
+ Do all in one go!
+ cd into the directory that would be pushed to git with at least the README.md file...
+
+```
+REPO="name of the repository"
+curl -u 'calliari' https://api.github.com/user/repos -d "{\"name\":\"$REPO\"}" && git init && git add . && git commit -m "first commit" && git remote add origin https://github.com/Calliari/"$REPO".git && git push -u origin master
 
 ```
 
